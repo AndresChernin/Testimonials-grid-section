@@ -1,0 +1,190 @@
+:root{
+    /*common cardssettings*/
+    --card-part-padding-left:2rem;
+    --card-part-title-size:1.2rem;
+    --card-part-padding-top:2rem;
+    --card-part-padding-bottom:2rem;
+    --autor-part-gap:1rem;
+    --card-part-size-of-name:0.9rem;
+    --card-part-size-of-graduation:0.65rem;
+    --card-part-size-of-experience:1rem;
+    --card-part-size-of-description:0.75rem;
+    --description-padding-top:0.5rem;
+    --description-padding-bottom:0;
+    --card-part-border-radius:0.65rem;
+    --card-part-gap:0.5rem;
+    --shadow-card:-0.625rem 1.25rem 1.25rem rgba(0,0,0, 0.08);
+    --img-border-radius:50%;
+    
+    /*settings for clifford card*/
+    --clifford-container-bg-color: hsl(263, 55%, 52%);
+    --clifford-container-text-color: hsl(214, 17%, 92%);
+    --clifford-container-color-of-img-border:hsl(264, 82%, 80%);
+   
+    /*settings for walters card*/
+    --walters-container-bg-color:hsl(224, 10%, 45%);
+    --walters-container-text-color: hsl(0, 0%, 81%); 
+    /*settings for harmon card*/
+
+    --harmon-container-experience-color:hsl(218, 39%, 32%);
+    --harmon-container-name-graduate-discription-color:hsl(224, 10%, 45%);
+    /*settings for abrams card*/
+    --abrams-container-bg-color:hsl(219, 29%, 14%);
+    --abrams-container-h-color: hsl(260, 100%, 95%);
+    --abrams-container-p-color:hsl(214, 17%, 92%);
+    
+    /*settings for whittle card*/
+    --whittle-container-experience-color:hsl(218, 39%, 32%) ;
+    --whittle-container-name-color:hsl(218, 39%, 32%);
+
+    --whitlle-container-graduate-color:hsl(224, 10%, 45%);
+}
+.card-part{
+    
+    width:100%;
+    /*max-width:20rem;*/
+    margin: 0 auto;
+    /*border:3px solid green;*/
+    background-color: var(--card-part-bg-color, white);
+    padding-inline-start:var(--card-part-padding-left);
+    padding-inline-end:var(--card-part-padding-left);
+    padding-top: var(--card-part-padding-top);
+    padding-bottom: var(--card-part-padding-bottom);
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: column;
+    gap:var(--card-part-gap);
+    border-radius: var(--card-part-border-radius);
+    /*box-shadow:var(--shadow-card);*/
+}
+.autor-part{
+    display:flex;
+    justify-content: flex-start;
+    gap:var(--autor-part-gap);
+}
+.information-part{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.name-settings{
+    font-size:var(--card-part-size-of-name);
+    font-weight: 600;
+}
+.graduation-settings{
+    font-size:var(--card-part-size-of-graduation);
+    font-weight: 500;
+}
+.img-settings{
+ width:var(--width-of-img);
+ height:var(--height-of-img);
+ border-radius: var(--img-border-radius);
+ /*border:1.5px solid white;*/
+ box-shadow: 0 0 0 2px var(--img-border-color, white);
+}
+.image-container{
+     /*width:80%;*/
+    display:flex;
+    justify-content: flex-end;
+   
+    
+}
+.title-settings{
+  font-size: var(--card-part-title-size);
+  font-weight: 600;
+  color:var(--color-of-dark-text);
+}
+.experience-settings{
+    font-weight: 600;
+    font-size:var(--card-part-size-of-experience);
+}
+.description-settings{
+    color:var(--color-of-hell-text);
+    font-weight:500;
+    padding-top:var(--description-padding-top);
+    padding-bottom:var(--description-padding-bottom);
+    font-size:var(--card-part-size-of-description);
+}
+.clifford-container{
+    --card-part-bg-color: var(--clifford-container-bg-color);
+   
+}
+.clifford-container .experience-settings,
+.clifford-container .name-settings{
+    color:white;
+}
+.clifford-container .description-settings,
+.clifford-container .graduation-settings
+{
+     color:var(--clifford-container-text-color);
+}
+.clifford-container .img-settings{
+    /*border:2px solid var(--clifford-container-color-of-img-border);*/
+    /*box-shadow: 0 0 0 2px var(--clifford-container-color-of-img-border);*/
+    --img-border-color: var(--clifford-container-color-of-img-border);
+}
+.walters-container{
+   --card-part-bg-color: var(--walters-container-bg-color);
+}
+.walters-container .experience-settings,
+.walters-container .name-settings{
+    color:white;
+}
+.walters-container .description-settings{
+    color:var(--clifford-container-text-color);
+}
+.walters-container .graduation-settings
+{
+     color:var(--walters-container-text-color);
+}
+
+.harmon-container .experience-settings
+{
+color:var(--harmon-container-experience-color);
+}
+.harmon-container .name-settings,
+.harmon-container .description-settings,
+.harmon-container .graduation-settings
+{
+    color:var(--harmon-container-name-graduate-discription-color);
+}
+
+
+.abrams-container{
+    --card-part-bg-color:var(--abrams-container-bg-color);
+}
+.abrams-container .experience-settings,
+.abrams-container .name-settings{
+color:var(--abrams-container-h-color);
+}
+.abrams-container .description-settings,
+.abrams-container .graduation-settings
+{
+    color:var(--abrams-container-p-color);
+}
+.abrams-container .img-settings{
+    /*border:2px solid var(--clifford-container-color-of-img-border);*/
+    /*box-shadow: 0 0 0 2px var(--clifford-container-color-of-img-border);*/
+    --img-border-color: var(--clifford-container-color-of-img-border);
+}
+.whittle-container .description-settings{
+    color:var(--whittle-container-name-color);
+}
+.whittle-container .name-settings{
+    color:var(--whittle-container-name-color);
+}
+.whittle-container .graduation-settings{
+    color:var(--whitlle-container-graduate-color);
+}
+.whittle-container .experience-settings{
+    color:var(--whittle-container-experience-color);
+}
+@media(min-width:50rem){
+    .card-part{
+        padding:1.75rem;
+        margin:0;
+    }
+}
+
+
+
